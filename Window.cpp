@@ -29,7 +29,7 @@ std::ostream& operator <<(std::ostream& os, const Window& window)
 {
     os<<"Name: "<<window.name<<'\n';
     const sf::Vector2u dimensions = window.getSize();
-    os<<"Dimensions: ("<<dimensions.x<<" x "<<dimensions.y<<")\n";
+    os<<"Dimensions: ("<<dimensions.x<<" x "<<dimensions.y<<")";
 
     return os;
 }
