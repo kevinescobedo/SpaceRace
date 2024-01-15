@@ -4,11 +4,14 @@
 #include <SFML/System/Vector2.hpp>
 #include <iostream>
 #include "Window.hpp"
+#include "Ship.hpp"
 
 class Game
 {
 private:
     Window window;
+    Ship player1;
+    Ship player2;
 
 public:
     Game(unsigned int windowWidth, unsigned int windowLength);
