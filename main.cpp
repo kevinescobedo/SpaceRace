@@ -1,7 +1,9 @@
 #include "Game.hpp"
+#include <ctime>
 
 int main(int argc, char** argv)
 {
+    srand((unsigned int)time(nullptr));
     if(argc != 3)
     {
         std::cerr<<"Usage: "<<argv[0]<<" <window-width> <window-length>\n";

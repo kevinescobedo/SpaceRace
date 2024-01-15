@@ -1,7 +1,7 @@
 #include "Game.hpp"
 
 Game::Game(unsigned int windowWidth, unsigned int windowLength)
-:window("Space Race", windowWidth, windowLength)
+:window("Space Race", windowWidth, windowLength), player1(windowWidth / 4.f, 8.5 * windowLength / 10.f, windowWidth / 25.f, windowLength / 10.f), player2(3 * windowWidth / 4.f, 8.5 * windowLength / 10.f, windowWidth / 25.f, windowLength / 10.f)
 {
 
 }
@@ -13,7 +13,7 @@ Game::Game(const sf::Vector2u& dimensions)
 }
 
 Game::Game(const Game& game)
-:window(game.window)
+:window(game.window), player1(game.player1), player2(game.player2)
 {
 
 }
@@ -56,6 +56,10 @@ void Game::play()
         }
 
         window.clear();
+
+        window.draw(player1);
+        window.draw(player2);
+
         window.display();
     }
 }
